@@ -48,3 +48,8 @@ tasks.withType(Checkstyle).configureEach {
 		html.required = true
 	}
 }
+
+// Explicitly set the Spring Boot main class to avoid :bootRun resolution issues
+springBoot {
+	mainClass = 'com.example.notesbackend.NotesBackendApplication'
+}
